@@ -11,9 +11,10 @@
   />
   <button (click)="addAppointment()">Add</button>
 
-  <ul *ngFor="let item of appointment">
-    <li>{{ item.title }}</li>
-    <li>{{ item.id }}</li>
-    <li>{{ item.date.toLocaleDateString() }}</li>
+  <ul *ngFor="let appointment of appointments; index as i">
+    <li>{{ appointment.title }}</li>
+    <li>{{ appointment.id }}</li>
+    <li>{{ appointment.date.toLocaleDateString() }}</li>
+    <button (click)="deleteAppointment(appointment)">Delete</button>
   </ul>
 </div>
