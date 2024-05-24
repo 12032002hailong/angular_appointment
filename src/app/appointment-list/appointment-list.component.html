@@ -10,4 +10,10 @@
     [(ngModel)]="newAppointmentDate"
   />
   <button (click)="addAppointment()">Add</button>
+
+  <ul *ngFor="let item of appointment">
+    <li>{{ item.title }}</li>
+    <li>{{ item.id }}</li>
+    <li>{{ item.date.toLocaleDateString() }}</li>
+  </ul>
 </div>

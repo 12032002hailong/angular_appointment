@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Appointment } from '../models/appointment';
 import { FormsModule, NgModel } from '@angular/forms';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-appointment-list',
   standalone: true,
-  imports: [FormsModule,],
+  imports: [FormsModule, NgFor],
   templateUrl: './appointment-list.component.html',
   styleUrl: './appointment-list.component.css'
 })
@@ -26,8 +27,8 @@ export class AppointmentListComponent {
       this.newAppointmentDate = new Date();
       this.newAppointmentTitle = "";
       console.log(newAppointment);
-
     }
+    else return;
   }
 
 }
