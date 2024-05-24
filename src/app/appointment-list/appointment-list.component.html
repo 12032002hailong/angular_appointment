@@ -1,3 +1,13 @@
-<p>Hello :{{ appointment.id }}</p>
-<p>Hello :{{ appointment.title }}</p>
-<p>Hello :{{ appointment.date.toLocaleDateString() }}</p>
+<div>
+  <input
+    type="text"
+    placeholder="Appointment description"
+    [(ngModel)]="newAppointmentTitle"
+  />
+  <input
+    type="text"
+    placeholder="Appointment date"
+    [(ngModel)]="newAppointmentDate"
+  />
+  <button (click)="addAppointment()">Add</button>
+</div>
