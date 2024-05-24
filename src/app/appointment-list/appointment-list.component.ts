@@ -26,6 +26,8 @@ export class AppointmentListComponent {
       this.appointments.push(newAppointment);
       this.newAppointmentDate = new Date();
       this.newAppointmentTitle = "";
+
+      localStorage.setItem("appointments", JSON.stringify(this.appointments))
     }
     else return;
   }
@@ -33,7 +35,7 @@ export class AppointmentListComponent {
   deleteAppointment(appointment: Appointment) {
     const updateAppointment = this.appointments.filter(item => item !== appointment);
     this.appointments = updateAppointment;
-
+    localStorage.setItem("appointments", JSON.stringify(this.appointments))
 
   }
 
