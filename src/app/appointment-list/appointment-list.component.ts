@@ -6,7 +6,7 @@ import { NgFor } from '@angular/common';
 @Component({
   selector: 'app-appointment-list',
   standalone: true,
-  imports: [FormsModule, NgFor],
+  imports: [FormsModule, NgFor,],
   templateUrl: './appointment-list.component.html',
   styleUrl: './appointment-list.component.css'
 })
